@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+{% if student_name == "abcd" %}
+    consolel.log("yep")
+{% endif %}
+  <link rel = "stylesheet" href = "{% static 'styles.css' %}">
+</head>
+
+<body>
+<h1><center><u>Freedom International School</u></center></h1>
+<center><div class = "main">
+  <p><u>Login</u></p>
+  <div>
+    <p class = "entry">Name</p>
+    <input type = "text" id = "name">
+  </div>
+  <div>
+    <p class = "entry">Student ID</p>
+    <input type = "text" id = "id">
+  </div>
+  <div class="buttondiv">
+  <button onclick = "clickable()">Submit</button>
+  </div>
+</div></center>
+
+<script>
+  function clickable(){
+    var student_name = document.getElementById("name").value
+    var student_id = document.getElementById("id").value
+    console.log(student_name)
+    console.log(student_id)
+  }
+
+</script>
+
+
+</body>
+
+</html>
